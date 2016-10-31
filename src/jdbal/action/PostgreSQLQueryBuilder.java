@@ -126,5 +126,11 @@ class PostgreSQLQueryBuilder implements QueryBuilder{
 		return sql;
 	}
 
+	@Override
+	public String createTableQueryBuild(TableCreator tc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

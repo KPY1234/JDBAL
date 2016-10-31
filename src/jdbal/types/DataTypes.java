@@ -16,4 +16,14 @@ public class DataTypes {
 	 * ¼Æ­ÈÃş«¬
 	 */
 	public static final int Number = 2;
+	
+	
+	public static final int Int = 3;
+	
+	
+	public static final int BigInt = 4;
+	
+	
+	public static final int Text = 5;
+	
 }

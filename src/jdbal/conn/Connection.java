@@ -176,8 +176,8 @@ public class Connection {
 	
 	public static void main(String[] args) {
 		long st = new Date().getTime();
-		Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
-				"sa", "icrdc4isr19+","test","127.0.0.1",DataBaseTypes.DefaultSQLServerPort);
+		Connection conn = new Connection(DataBaseTypes.MySQL, DataBaseTypes.MySQLDriver, 
+				"stocker", "icrd00","stock","127.0.0.1",DataBaseTypes.DefaultMySQLPort);
 		conn.close();
 		long et = new Date().getTime();
 		System.out.println("spend time: "+(et - st)+" ms");

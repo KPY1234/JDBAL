@@ -6,4 +6,5 @@ interface QueryBuilder {
 	public String insertQueryBuild(Insertion insert);
 	public String updateQueryBuild(Update update);
 	public String deleteQueryBuild(Deletion delete);
+	public String createTableQueryBuild(TableCreator tc);
 }
