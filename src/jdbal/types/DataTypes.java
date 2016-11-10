@@ -26,4 +26,9 @@ public class DataTypes {
 	
 	public static final int Text = 5;
 	
+	
+	public static final int Float = 6;
+	
+	
+	public static final int Double = 7;
 }

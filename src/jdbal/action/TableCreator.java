@@ -68,8 +68,8 @@ public class TableCreator {
 				"stocker", "icrd00","stock","127.0.0.1",DataBaseTypes.DefaultMySQLPort);
 	  
 		TableCreator tc = new TableCreator(conn, "test2")
-				.addFieldAttribute(new FieldAttribute("col1", DataTypes.Int, false, true))
-				.addFieldAttribute(new FieldAttribute("col2", DataTypes.Text, false, false));
+				.addFieldAttribute(new FieldAttribute("col1", DataTypes.Int, false, true, true))
+				.addFieldAttribute(new FieldAttribute("col2", DataTypes.Text, false, false, false));
 	  
 		tc.execute();
   

@@ -150,6 +150,14 @@ class MySQLQueryBuilder implements QueryBuilder{
 				sql+="BIGINT";
 			else if(fieldAttributes.get(i).getDataType()==DataTypes.Text)
 				sql+="TEXT";
+			else if(fieldAttributes.get(i).getDataType()==DataTypes.Float)
+				sql+="FLOAT";
+			else if(fieldAttributes.get(i).getDataType()==DataTypes.Double)
+				sql+="DOUBLE";
+			else if(fieldAttributes.get(i).getDataType()==DataTypes.Number)
+				sql+="FLOAT";
+			else if(fieldAttributes.get(i).getDataType()==DataTypes.String)
+				sql+="TEXT";
 			
 			sql+= "  ";
 			
@@ -157,6 +165,12 @@ class MySQLQueryBuilder implements QueryBuilder{
 				sql+="NULL";
 			else
 				sql+="NOT NULL";
+			
+			sql+= "  ";
+			
+			if(fieldAttributes.get(i).getAutoIncrement()==true)
+				sql+="AUTO_INCREMENT";
+		
 			
 			if(fieldAttributes.get(i).getIsPrimary()==true)
 				primaryCols.add(fieldAttributes.get(i).getField());
@@ -177,20 +191,6 @@ class MySQLQueryBuilder implements QueryBuilder{
 	    	
 	    	sql+=", PRIMARY KEY("+primaryColsStr+")";
 	    }
-	    
-//	        + "pk          BIGINT NOT NULL, "                // boolean
-//	        + "col_byte             TINYINT, "            // byte
-//	        + "col_short            SMALLINT, "           // short
-//	        + "col_int              INTEGER DEFAULT 11, "            // int
-//	        + "col_float            REAL, "               // float
-//	        + "col_double           DOUBLE PRECISION, "   // double
-//	        + "col_bigdecimal       DECIMAL(13,0), "      // BigDecimal; can also be NUMERIC(p,s)
-//	        + "col_string           VARCHAR(254) DEFAULT 'aa', "       // String
-//	        + "col_date             DATETIME, "           // Date
-//	        + "col_time             DATETIME, "           // Time
-//	        + "col_timestamp        TIMESTAMP, "          // Timestamp
-//	        + "col_characterstream  TEXT, "               // CharacterStream or AsciiStream (< 2 GBytes)
-//	        + "col_binarystream     IMAGE)";              // BinaryStream (< 2 GBytes)
 		
 	    sql += ")";
 		
