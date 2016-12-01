@@ -3,8 +3,8 @@ package jdbal.structure;
 import jdbal.types.DataTypes;
 
 /**
- * ±ø¥óª«¥ó
- * @author °ª¯E¶¿
+ * æ¢ä»¶ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.02
  */
 public class Condition {
@@ -15,11 +15,11 @@ public class Condition {
 	private int dataType;
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì¦WºÙ
-	 * @param operationType ¹Bºâ¦¡ºØÃş
-	 * @param comparedValue ³Q¹Bºâªº­È
-	 * @param dataType ¸ê®ÆÃş«¬
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½åç¨±
+	 * @param operationType é‹ç®—å¼ç¨®é¡
+	 * @param comparedValue è¢«é‹ç®—çš„å€¼
+	 * @param dataType è³‡æ–™é¡å‹
 	 */
 	public Condition(String field, String operationType, Object comparedValue, int dataType){
 		col_field = field;
@@ -29,24 +29,24 @@ public class Condition {
 	}
 	
 	/**
-	 * ¨ú±oÄæ¦ì¦WºÙ
-	 * @return Äæ¦ì¦WºÙ
+	 * å–å¾—æ¬„ä½åç¨±
+	 * @return æ¬„ä½åç¨±
 	 */
 	public String getField(){
 		return col_field;
 	}
 	
 	/**
-	 * ¨ú±o¹BºâºØÃş
-	 * @return ¹BºâºØÃş
+	 * å–å¾—é‹ç®—ç¨®é¡
+	 * @return é‹ç®—ç¨®é¡
 	 */
 	public String getOperationType(){
 		return operationType;
 	}
 	
 	/**
-	 * ¨ú±o³Q¹Bºâªº­È
-	 * @return ³Q¹Bºâªº­È
+	 * å–å¾—è¢«é‹ç®—çš„å€¼
+	 * @return è¢«é‹ç®—çš„å€¼
 	 */
 	public String getComparedValue(){
 		
@@ -61,8 +61,8 @@ public class Condition {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æ«¬ºA
-	 * @return ¸ê®ÆÃş«¬
+	 * å–å¾—è³‡æ–™å‹æ…‹
+	 * @return è³‡æ–™é¡å‹
 	 */
 	public int getDataType(){
 		return dataType;

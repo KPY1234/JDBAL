@@ -14,19 +14,19 @@ import jdbal.types.DataTypes;
 import jdbal.types.OperationTypes;
 import jdbal.types.OrderTypes;
 /**
- * ¸ê®Æ®w·j´MªºÃş§O
+ * è³‡æ–™åº«æœå°‹çš„é¡åˆ¥
  * <p>
- * Selection ª«¥ó¥Î¨Ó¼´¥X¸ê®Æ®w¸ê®Æ¡A¥iÃB¥~¥[±ø¥ó­­¨î¡B¦X¨Ö(Join)¾Ş§@¡A¥i³]©w¦^¶Çµ²ªGªº¼Æ¶q¡AÁ|¨Ò»¡©ú¡G
+ * Selection ç‰©ä»¶ç”¨ä¾†æ’ˆå‡ºè³‡æ–™åº«è³‡æ–™ï¼Œå¯é¡å¤–åŠ æ¢ä»¶é™åˆ¶ã€åˆä½µ(Join)æ“ä½œï¼Œå¯è¨­å®šå›å‚³çµæœçš„æ•¸é‡ï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre>
  *     Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
  *     					username, password, dbname, "127.0.0.1", DataBaseTypes.DefaultSQLServerPort);
  *     Selection select = new Selection(conn, tbname);
  * </pre></blockquote><p>
- * ¥[¤J­n¦^¶ÇªºÄæ¦ì¡A¨Ï¥Î
+ * åŠ å…¥è¦å›å‚³çš„æ¬„ä½ï¼Œä½¿ç”¨
  * <blockquote><pre>
  *     select.addField(field);
  * </pre></blockquote>
- * ¥[¤J±ø¥ó¦¡
+ * åŠ å…¥æ¢ä»¶å¼
  * <blockquote><pre>{@code
  * 	   ConditionBuilder cb = new ConditionBuilder()
  * 			.addCondition(new Condition(field1, OperationTypes.Greater, 0, DataTypes.Number))
@@ -34,19 +34,19 @@ import jdbal.types.OrderTypes;
  * 			.addCondition(new Condition(field1, OperationTypes.Less, 5, DataTypes.Number));
  * 	   select.addConditions(cb);}	
  * </pre></blockquote>
- * ¥[¤J±Æ§Ç¥\¯à
+ * åŠ å…¥æ’åºåŠŸèƒ½
  * <blockquote><pre>
  *     select.addOrder(new FieldOrder(field, OrderTypes.ASC));
  * </pre></blockquote>
- * ³]©w³Ì¤j¦^¶Çµ§¼Æ
+ * è¨­å®šæœ€å¤§å›å‚³ç­†æ•¸
  * <blockquote><pre>
  *     select.setQuantity(50);
  * </pre></blockquote>
- * °õ¦æ·j´M¾Ş§@
+ * åŸ·è¡Œæœå°‹æ“ä½œ
  * <blockquote><pre>
  *     select.execute();
  * </pre></blockquote>
- * ¤W­z°Ê§@¥i¥Î¤@¦æ±Ô­zªí¥Ü
+ * ä¸Šè¿°å‹•ä½œå¯ç”¨ä¸€è¡Œæ•˜è¿°è¡¨ç¤º
  * <blockquote><pre> {@code
  * 	   ArrayList<Tuple> results = new Selection(conn, tbname)
  * 			.addField(field1)
@@ -56,7 +56,7 @@ import jdbal.types.OrderTypes;
  * 			.setQuantity(50)
  * 			.execute();}	
  * </pre></blockquote>
- * ­Y¨Ï¥Î¦X¨Ö(Join)¾Ş§@¡A¥²¶·«ü©w¸ê®Æªí¦WºÙ¡AÁ|¨Ò»¡©ú¡G
+ * è‹¥ä½¿ç”¨åˆä½µ(Join)æ“ä½œï¼Œå¿…é ˆæŒ‡å®šè³‡æ–™è¡¨åç¨±ï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre> {@code
  * 	   ConditionBuilder cb = new ConditionBuilder()
  * 			.addCondition(new Condition(tableName.field1, OperationTypes.Greater, 0, DataTypes.Number))
@@ -76,7 +76,7 @@ import jdbal.types.OrderTypes;
  * 
  * 
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see     jdbal.conn.Connection
  * @see     jdbal.action.ConditionBuilder
  * @see     jdbal.action.JoinBuilder
@@ -94,9 +94,9 @@ public class Selection {
 	private int quantity;
 	
 	/**
-	 * «Øºc¤l
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbName ¸ê®Æªí¦WºÙ
+	 * å»ºæ§‹å­
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbName è³‡æ–™è¡¨åç¨±
 	 */
 	public Selection(Connection conn, String tbName){
 		db_conn = conn;
@@ -108,8 +108,8 @@ public class Selection {
 	
 	
 	/**
-	 * ¥[¤J©Ò¦³¦^¶ÇªºÄæ¦ì
-	 * @return ¦Û¤vÃş§O
+	 * åŠ å…¥æ‰€æœ‰å›å‚³çš„æ¬„ä½
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection addAllFields(){
 		fields.add("*");
@@ -117,9 +117,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ·s¼W¤@­Ó¦^¶ÇªºÄæ¦ì
-	 * @param field Äæ¦ì¦WºÙ
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢ä¸€å€‹å›å‚³çš„æ¬„ä½
+	 * @param field æ¬„ä½åç¨±
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection addField(String field){
 		fields.add(field);
@@ -127,9 +127,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ·s¼W±Æ§Çªº³W«h
-	 * @param fieldOrder Äæ¦ì»P±Æ§Ç¤§ª«¥ó
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢æ’åºçš„è¦å‰‡
+	 * @param fieldOrder æ¬„ä½èˆ‡æ’åºä¹‹ç‰©ä»¶
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection addOrder(FieldOrder fieldOrder){
 		fieldOrders.add(fieldOrder);
@@ -137,9 +137,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ·s¼W¦X¨Ö¹Bºâ
-	 * @param jb ¦X¨Ö¹Bºâ«ØºcªÌ
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢åˆä½µé‹ç®—
+	 * @param jb åˆä½µé‹ç®—å»ºæ§‹è€…
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection addJoins(JoinBuilder jb){
 		joinBuilder = jb;
@@ -147,9 +147,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ·s¼W±ø¥ó
-	 * @param cb ±ø¥ó«ØºcªÌ
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢æ¢ä»¶
+	 * @param cb æ¢ä»¶å»ºæ§‹è€…
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection addConditions(ConditionBuilder cb){
 		condBuilder = cb;
@@ -157,9 +157,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ³]©w¦^¶Ç¸ê®Æ¼Æ¶q
-	 * @param quantity ¸ê®Æ¼Æ¶q
-	 * @return ¦Û¤vÃş§O
+	 * è¨­å®šå›å‚³è³‡æ–™æ•¸é‡
+	 * @param quantity è³‡æ–™æ•¸é‡
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Selection setQuantity(int quantity){
 		this.quantity = quantity;
@@ -167,56 +167,56 @@ public class Selection {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æªí¦WºÙ
-	 * @return ¸ê®Æªí¦WºÙ
+	 * å–å¾—è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨åç¨±
 	 */
 	public String getTableName(){
 		return db_table;
 	}
 	
 	/**
-	 * ¨ú±o©Ò¦³¦^¶ÇªºÄæ¦ì¦WºÙ
-	 * @return ©Ò¦³¦^¶ÇªºÄæ¦ì¦WºÙ
+	 * å–å¾—æ‰€æœ‰å›å‚³çš„æ¬„ä½åç¨±
+	 * @return æ‰€æœ‰å›å‚³çš„æ¬„ä½åç¨±
 	 */
 	public ArrayList<String> getFields(){
 		return fields;
 	}
 	
 	/**
-	 * ¨ú±o¦X¨Ö«ØºcªÌ
-	 * @return ¦X¨Ö«ØºcªÌ
+	 * å–å¾—åˆä½µå»ºæ§‹è€…
+	 * @return åˆä½µå»ºæ§‹è€…
 	 */
 	public JoinBuilder getJoinBuilder(){
 		return joinBuilder;
 	}
 	
 	/**
-	 * ¨ú±o±ø¥ó«ØºcªÌ
-	 * @return ±ø¥ó«ØºcªÌ
+	 * å–å¾—æ¢ä»¶å»ºæ§‹è€…
+	 * @return æ¢ä»¶å»ºæ§‹è€…
 	 */
 	public ConditionBuilder getConditionBuilder(){
 		return condBuilder;
 	}
 	
 	/**
-	 * ¨ú±o©Ò¦³Äæ¦ì±Æ§Ç¹ï
-	 * @return ©Ò¦³Äæ¦ì±Æ§Ç¹ï
+	 * å–å¾—æ‰€æœ‰æ¬„ä½æ’åºå°
+	 * @return æ‰€æœ‰æ¬„ä½æ’åºå°
 	 */
 	public ArrayList<FieldOrder> getFieldOrders(){
 		return fieldOrders;
 	}
 	
 	/**
-	 * ¨ú±o¦^¶Ç¼Æ¶q
-	 * @return ¦^¶Ç¼Æ¶q
+	 * å–å¾—å›å‚³æ•¸é‡
+	 * @return å›å‚³æ•¸é‡
 	 */
 	public int getQuantity(){
 		return quantity;
 	}
 	
 	/**
-	 * °õ¦æ¸ê®Æ®w¬d¸ß¥\¯à
-	 * @return ¬d¸ßµ²ªG
+	 * åŸ·è¡Œè³‡æ–™åº«æŸ¥è©¢åŠŸèƒ½
+	 * @return æŸ¥è©¢çµæœ
 	 */
 	public ArrayList<Tuple> execute(){
 		
@@ -249,9 +249,9 @@ public class Selection {
 	}
 	
 	/**
-	 * ¨Ï¥Î¦Û­qªºSQL¦r¦ê°õ¦æ¸ê®Æ®w¬d¸ß¥\¯à
-	 * @param sql ¦Û­qªºSQL¦r¦ê
-	 * @return ¬d¸ßµ²ªG
+	 * ä½¿ç”¨è‡ªè¨‚çš„SQLå­—ä¸²åŸ·è¡Œè³‡æ–™åº«æŸ¥è©¢åŠŸèƒ½
+	 * @param sql è‡ªè¨‚çš„SQLå­—ä¸²
+	 * @return æŸ¥è©¢çµæœ
 	 */
 	public ArrayList<Tuple> executeBySQL(String sql){
 		
@@ -278,7 +278,7 @@ public class Selection {
 	}
 	
 	/**
-	 * °õ¦æ§¹«á²M°£¹L¥hªº·s¼W±Ô­z
+	 * åŸ·è¡Œå®Œå¾Œæ¸…é™¤éå»çš„æ–°å¢æ•˜è¿°
 	 */
 	private void clear(){
 		condBuilder = null;

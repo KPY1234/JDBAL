@@ -1,19 +1,19 @@
 package jdbal.types;
 
 /**
- * ÅŞ¿è¹BºâºØÃşª«¥ó
- * @author °ª¯E¶¿
+ * é‚è¼¯é‹ç®—ç¨®é¡ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.2
  *
  */
 public class LogicTypes {
 
 	/**
-	 * °µAND¹Bºâ
+	 * åšANDé‹ç®—
 	 */
 	public static final String AND = "AND";
 	/**
-	 * °µOR¹Bºâ
+	 * åšORé‹ç®—
 	 */
 	public static final String OR = "OR";
 

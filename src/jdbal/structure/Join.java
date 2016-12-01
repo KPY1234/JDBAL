@@ -1,8 +1,8 @@
 package jdbal.structure;
 
 /**
- * ¦X¨Ö¾Ş§@¤§ª«¥ó
- * @author °ª¯E¶¿
+ * åˆä½µæ“ä½œä¹‹ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.02
  *
  */
@@ -15,12 +15,12 @@ public class Join {
 	private String referField;
 	
 	/**
-	 * «Øºc¤l
-	 * @param joinType ¦X¨Ö¾Ş§@ªººØÃş
-	 * @param selfTable ¦Û¤v¸ê®Æªí¦WºÙ
-	 * @param selfField ¦Û¤vÄæ¦ì¦WºÙ
-	 * @param referTable ¥~³¡¸ê®Æªí¦WºÙ
-	 * @param referField ¥~³¡Äæ¦ì¦WºÙ
+	 * å»ºæ§‹å­
+	 * @param joinType åˆä½µæ“ä½œçš„ç¨®é¡
+	 * @param selfTable è‡ªå·±è³‡æ–™è¡¨åç¨±
+	 * @param selfField è‡ªå·±æ¬„ä½åç¨±
+	 * @param referTable å¤–éƒ¨è³‡æ–™è¡¨åç¨±
+	 * @param referField å¤–éƒ¨æ¬„ä½åç¨±
 	 */
 	public Join(String joinType, String selfTable, String selfField, String referTable, String referField){
 		this.joinType = joinType;
@@ -32,40 +32,40 @@ public class Join {
 	
 	
 	/**
-	 * ¨ú±o¦X¨Ö¾Ş§@ºØÃş
-	 * @return ¦X¨Ö¾Ş§@ºØÃş
+	 * å–å¾—åˆä½µæ“ä½œç¨®é¡
+	 * @return åˆä½µæ“ä½œç¨®é¡
 	 */
 	public String getJoinType(){
 		return joinType;
 	}
 	
 	/**
-	 * ¨ú±o¦Û¤v¸ê®Æªí¦WºÙ
-	 * @return ¸ê®Æªí¦WºÙ
+	 * å–å¾—è‡ªå·±è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨åç¨±
 	 */
 	public String getSelfTable(){
 		return selfTable;
 	}
 
 	/**
-	 * ¨ú±o¦Û¤vÄæ¦ì¦WºÙ
-	 * @return Äæ¦ì¦WºÙ
+	 * å–å¾—è‡ªå·±æ¬„ä½åç¨±
+	 * @return æ¬„ä½åç¨±
 	 */
 	public String getSelfField(){
 		return selfField;
 	}
 	
 	/**
-	 * ¨ú±o¥~³¡¸ê®Æªí¦WºÙ
-	 * @return ¥~³¡¸ê®Æªí¦WºÙ
+	 * å–å¾—å¤–éƒ¨è³‡æ–™è¡¨åç¨±
+	 * @return å¤–éƒ¨è³‡æ–™è¡¨åç¨±
 	 */
 	public String getReferTable(){
 		return referTable;
 	}
 	
 	/**
-	 * ¨ú±o¥~³¡Äæ¦ì¦WºÙ
-	 * @return Äæ¦ì¦WºÙ
+	 * å–å¾—å¤–éƒ¨æ¬„ä½åç¨±
+	 * @return æ¬„ä½åç¨±
 	 */
 	public String getReferField(){
 		return referField;

@@ -1,19 +1,19 @@
 package jdbal.types;
 
 /**
- * ¸ê®ÆÃþ«¬ª«¥ó
- * @author °ª¯E¶¿
+ * è³‡æ–™é¡žåž‹ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.2
  */
 public class DataTypes {
 
 	/**
-	 * ¦r¦êÃþ«¬
+	 * å­—ä¸²é¡žåž‹
 	 */
 	public static final int String = 1;
 	
 	/**
-	 * ¼Æ­ÈÃþ«¬
+	 * æ•¸å€¼é¡žåž‹
 	 */
 	public static final int Number = 2;
 	

@@ -7,18 +7,18 @@ import java.util.Date;
 import jdbal.types.DataBaseTypes;
 
 /**
- * ¸ê®Æ®wÃìµ²¤§ª«¥ó
+ * è³‡æ–™åº«éˆçµä¹‹ç‰©ä»¶
  * <p>
- * Connection ª«¥ó¥Î¨Ó³sµ²¸ê®Æ®w¡AÂ²¤Æ¤F­ì¥Íjava api ½ÆÂøªº³sµ²µ{§Ç¡AÁ|¨Ò»¡©ú¡G
+ * Connection ç‰©ä»¶ç”¨ä¾†é€£çµè³‡æ–™åº«ï¼Œç°¡åŒ–äº†åŸç”Ÿjava api è¤‡é›œçš„é€£çµç¨‹åºï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre>
  *     Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
 				username, password, dbname, "127.0.0.1", DataBaseTypes.DefaultSQLServerPort);
  * </pre></blockquote><p>
- * ·í­nÃö³¬»P¸ê®Æ®wªº³sµ²®É¡A¨Ï¥Î
+ * ç•¶è¦é—œé–‰èˆ‡è³‡æ–™åº«çš„é€£çµæ™‚ï¼Œä½¿ç”¨
  * <blockquote><pre>
  *     conn.close();
  * </pre></blockquote>
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see    jdbal.types.DataBaseTypes
  * @since  JDBAL-0.02
  */
@@ -35,14 +35,14 @@ public class Connection {
 	private java.sql.Connection conn;
 	
 	/**
-	 * «Øºc¤l
-	 * @param dbtype ¸ê®Æ®wºØÃş¡A¥i°Ñ¦Ò<a href="../types/DataBaseTypes.html">DataBaseTypes</a>Ãş§O
-	 * @param dbdriver ¸ê®Æ®wÅX°Êµ{¦¡¦WºÙ¡A¥i°Ñ¦Ò<a href="../types/DataBaseTypes.html">DataBaseTypes</a>Ãş§O
-	 * @param dbuser ¸ê®Æ®w¨Ï¥ÎªÌ±b¸¹
-	 * @param dbpassword ¸ê®Æ®w¨Ï¥ÎªÌ±K½X
-	 * @param dbname ¸ê®Æ®w¦WºÙ
-	 * @param dbadress ¸ê®Æ®wIP¦ì§}
-	 * @param port ¸ê®Æ®w³sµ²°ğ¡A¥i°Ñ¦Ò<a href="../types/DataBaseTypes.html">DataBaseTypes</a>Ãş§O
+	 * å»ºæ§‹å­
+	 * @param dbtype è³‡æ–™åº«ç¨®é¡ï¼Œå¯åƒè€ƒ<a href="../types/DataBaseTypes.html">DataBaseTypes</a>é¡åˆ¥
+	 * @param dbdriver è³‡æ–™åº«é©…å‹•ç¨‹å¼åç¨±ï¼Œå¯åƒè€ƒ<a href="../types/DataBaseTypes.html">DataBaseTypes</a>é¡åˆ¥
+	 * @param dbuser è³‡æ–™åº«ä½¿ç”¨è€…å¸³è™Ÿ
+	 * @param dbpassword è³‡æ–™åº«ä½¿ç”¨è€…å¯†ç¢¼
+	 * @param dbname è³‡æ–™åº«åç¨±
+	 * @param dbadress è³‡æ–™åº«IPä½å€
+	 * @param port è³‡æ–™åº«é€£çµåŸ ï¼Œå¯åƒè€ƒ<a href="../types/DataBaseTypes.html">DataBaseTypes</a>é¡åˆ¥
 	 */
 	
 	public Connection(int dbtype, String dbdriver, String dbuser, String dbpassword, 
@@ -79,7 +79,7 @@ public class Connection {
 	}
 	
 	/**
-	 * Ãö³¬¸ê®Æ®w³sµ²
+	 * é—œé–‰è³‡æ–™åº«é€£çµ
 	 */
 	public void close(){
 		try {
@@ -91,64 +91,64 @@ public class Connection {
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®wºØÃş
-	 * @param type ºØÃş
+	 * è¨­å®šè³‡æ–™åº«ç¨®é¡
+	 * @param type ç¨®é¡
 	 */
 	public void setDBType(int type){
 		db_type = type;
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®wÅX°Êµ{¦¡¦WºÙ
-	 * @param driver ¸ê®Æ®wÅX°Êµ{¦¡¦WºÙ
+	 * è¨­å®šè³‡æ–™åº«é©…å‹•ç¨‹å¼åç¨±
+	 * @param driver è³‡æ–™åº«é©…å‹•ç¨‹å¼åç¨±
 	 */
 	public void setDriver(String driver){
 		db_driver = driver;
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®w¨Ï¥ÎªÌ±b¸¹
-	 * @param user ¨Ï¥ÎªÌ±b¸¹
+	 * è¨­å®šè³‡æ–™åº«ä½¿ç”¨è€…å¸³è™Ÿ
+	 * @param user ä½¿ç”¨è€…å¸³è™Ÿ
 	 */
 	public void setUser(String user){
 		db_user = user;
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®w±K½X
-	 * @param password ¸ê®Æ®w±K½X
+	 * è¨­å®šè³‡æ–™åº«å¯†ç¢¼
+	 * @param password è³‡æ–™åº«å¯†ç¢¼
 	 */
 	public void setPassword(String password){
 		db_password = password;
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®w¦WºÙ
-	 * @param dbName ¸ê®Æ®w¦WºÙ
+	 * è¨­å®šè³‡æ–™åº«åç¨±
+	 * @param dbName è³‡æ–™åº«åç¨±
 	 */
 	public void setDBName(String dbName){
 		db_name = dbName;
 	}
 	
 	/**
-	 * ³]©w¸ê®Æ®wIP¦ì§}
-	 * @param address IP¦ì§}
+	 * è¨­å®šè³‡æ–™åº«IPä½å€
+	 * @param address IPä½å€
 	 */
 	public void setDBAdress(String address){
 		db_address = address;
 	}
 	
 	/**
-	 * ¨ú±o³sµ²ª«¥ó
-	 * @return ³sµ²ª«¥ó
+	 * å–å¾—é€£çµç‰©ä»¶
+	 * @return é€£çµç‰©ä»¶
 	 */
 	public java.sql.Connection getConnection(){
 		return conn;
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æ®wºØÃş
-	 * @return ¸ê®Æ®wºØÃş
+	 * å–å¾—è³‡æ–™åº«ç¨®é¡
+	 * @return è³‡æ–™åº«ç¨®é¡
 	 */
 	public int getDBType(){
 		return db_type;

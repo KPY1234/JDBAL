@@ -1,35 +1,35 @@
 package jdbal.types;
 
 /**
- * ¤ñ¸û¹BºâºØÃşª«¥ó
- * @author °ª¯E¶¿
+ * æ¯”è¼ƒé‹ç®—ç¨®é¡ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.5
  *
  */
 public class OperationTypes {
 	
 	/**
-	 * ¤ñ¸û¹Bºâ¡A¤j©ó
+	 * æ¯”è¼ƒé‹ç®—ï¼Œå¤§æ–¼
 	 */
 	public static final String Greater = ">";
 	/**
-	 * ¤ñ¸û¹Bºâ¡A¤j©óµ¥©ó
+	 * æ¯”è¼ƒé‹ç®—ï¼Œå¤§æ–¼ç­‰æ–¼
 	 */
 	public static final String GreaterEqual = ">=";
 	/**
-	 * ¤ñ¸û¹Bºâ¡A¤p©ó
+	 * æ¯”è¼ƒé‹ç®—ï¼Œå°æ–¼
 	 */
 	public static final String Less = "<";
 	/**
-	 * ¤ñ¸û¹Bºâ¡A¤p©óµ¥©ó
+	 * æ¯”è¼ƒé‹ç®—ï¼Œå°æ–¼ç­‰æ–¼
 	 */
 	public static final String LessEqual = "<=";
 	/**
-	 * ¤ñ¸û¹Bºâ¡Aµ¥©ó
+	 * æ¯”è¼ƒé‹ç®—ï¼Œç­‰æ–¼
 	 */
 	public static final String Equal = "=";
 	/**
-	 * ¦r¦ê¹Bºâ¡A¥]§t
+	 * å­—ä¸²é‹ç®—ï¼ŒåŒ…å«
 	 */
 	public static final String Contain = "LIKE";
 	

@@ -3,9 +3,9 @@ package jdbal.action;
 import jdbal.structure.Join;
 
 /**
- * ¦X¨Öªí¥Ü¦¡«Ø¥ßªÌª«¥ó
+ * åˆä½µè¡¨ç¤ºå¼å»ºç«‹è€…ç‰©ä»¶
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see    jdbal.structure.Join
  * @since  JDBAL-0.0.3
  *
@@ -15,9 +15,9 @@ public class JoinBuilder {
 	String joins = "";
 	
 	/**
-	 * ¥[¤J¦X¨Ö¤èªk
-	 * @param join ¦X¨Ö¤èªk
-	 * @return ¦Û¤v
+	 * åŠ å…¥åˆä½µæ–¹æ³•
+	 * @param join åˆä½µæ–¹æ³•
+	 * @return è‡ªå·±
 	 */
 	public JoinBuilder addJoin(Join join){
 		
@@ -28,8 +28,8 @@ public class JoinBuilder {
 	}
 	
 	/**
-	 * «Ø¥ß¦X¨Öªí¥Ü¦¡
-	 * @return ¦X¨Öªí¥Ü¦¡
+	 * å»ºç«‹åˆä½µè¡¨ç¤ºå¼
+	 * @return åˆä½µè¡¨ç¤ºå¼
 	 */
 	String build(){
 		return joins;

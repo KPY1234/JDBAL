@@ -3,9 +3,9 @@ package jdbal.structure;
 import java.util.ArrayList;
 
 /**
- * ¤@¦C¸ê®Æ²Õª«¥ó¡A¥Ñ¦h­Ó¬ö¿ı²Õ¦¨
+ * ä¸€åˆ—è³‡æ–™çµ„ç‰©ä»¶ï¼Œç”±å¤šå€‹ç´€éŒ„çµ„æˆ
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see    jdbal.structure.Record
  * @since  JDBAL-0.0.4
  *

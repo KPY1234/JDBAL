@@ -24,8 +24,8 @@ public class FieldAttribute {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æ«¬ºA
-	 * @return ¸ê®Æ«¬ºA
+	 * å–å¾—è³‡æ–™å‹æ…‹
+	 * @return è³‡æ–™å‹æ…‹
 	 */
 	public int getDataType(){
 		return col_dataType;

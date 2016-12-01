@@ -12,30 +12,30 @@ import jdbal.types.DataTypes;
 import jdbal.types.OperationTypes;
 
 /**
- * ¸ê®Æ®w§ó·sªºÃş§O
+ * è³‡æ–™åº«æ›´æ–°çš„é¡åˆ¥
  * <p>
- * Update ª«¥ó¥Î¨Ó§ó·s¸ê®Æ®wªº¸ê®Æ¡AÁ|¨Ò»¡©ú¡G
+ * Update ç‰©ä»¶ç”¨ä¾†æ›´æ–°è³‡æ–™åº«çš„è³‡æ–™ï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre>
  *     Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
  *     					username, password, dbname, "127.0.0.1", DataBaseTypes.DefaultSQLServerPort);
  *     Update update = new Update(conn, tbname);
  * </pre></blockquote><p>
- * ¥[¤J»İ­n§ó·sªºÄæ¦ì»P­È¡A¨Ï¥Î
+ * åŠ å…¥éœ€è¦æ›´æ–°çš„æ¬„ä½èˆ‡å€¼ï¼Œä½¿ç”¨
  * <blockquote><pre>
  *     update.setFieldValue(new FieldValue(field2, "CC001", DataTypes.String));
  *     update.setFieldValue(new FieldValue(field3, 12, DataTypes.Number));
  * </pre></blockquote>
- * ¥[¤J±ø¥ó¦¡
+ * åŠ å…¥æ¢ä»¶å¼
  * <blockquote><pre>{@code
  * 	   ConditionBuilder cb = new ConditionBuilder()
  * 			.addCondition(new Condition(field1, OperationTypes.Equal, 1, DataTypes.Number));
  * 	   update.addConditions(cb);}	
  * </pre></blockquote>
- * °õ¦æ·s¼W¸ê®Æ¾Ş§@
+ * åŸ·è¡Œæ–°å¢è³‡æ–™æ“ä½œ
  * <blockquote><pre>
  *     update.execute();
  * </pre></blockquote>
- * ¤W­z°Ê§@¥i¥Î¤@¦æ±Ô­zªí¥Ü
+ * ä¸Šè¿°å‹•ä½œå¯ç”¨ä¸€è¡Œæ•˜è¿°è¡¨ç¤º
  * <blockquote><pre> {@code
  * 		int result = new Update(conn, "test")
  * 			  	.setFieldValue(new FieldValue(field2, "AAQQQ", DataTypes.String))
@@ -44,7 +44,7 @@ import jdbal.types.OperationTypes;
  * 				.execute();}
  * </pre></blockquote>
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see     jdbal.conn.Connection
  * @see     jdbal.action.ConditionBuilder
  * @see     jdbal.structure.FieldValue
@@ -59,9 +59,9 @@ public class Update {
 	private ConditionBuilder condBuilder;
 	
 	/**
-	 * «Øºc¤l
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbName ¸ê®Æªí¦WºÙ
+	 * å»ºæ§‹å­
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbName è³‡æ–™è¡¨åç¨±
 	 */
 	public Update(Connection conn, String tbName){
 		db_conn = conn;
@@ -70,9 +70,9 @@ public class Update {
 	}
 	
 	/**
-	 * ·s¼W»İ§ó·sªºÄæ¦ì»P§ó·s­Èªºª«¥ó
-	 * @param fv ªºÄæ¦ì»P§ó·s­Èªºª«¥ó
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢éœ€æ›´æ–°çš„æ¬„ä½èˆ‡æ›´æ–°å€¼çš„ç‰©ä»¶
+	 * @param fv çš„æ¬„ä½èˆ‡æ›´æ–°å€¼çš„ç‰©ä»¶
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Update setFieldValue(FieldValue fv){
 		fieldValues.add(fv);
@@ -80,9 +80,9 @@ public class Update {
 	}
 	
 	/**
-	 * ·s¼W±ø¥ó
-	 * @param cb ±ø¥ó«ØºcªÌ
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢æ¢ä»¶
+	 * @param cb æ¢ä»¶å»ºæ§‹è€…
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Update addConditions(ConditionBuilder cb){
 		condBuilder = cb;
@@ -90,32 +90,32 @@ public class Update {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æªí¦WºÙ
-	 * @return ¸ê®Æªí¦WºÙ
+	 * å–å¾—è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨åç¨±
 	 */
 	public String getTableName(){
 		return db_table;
 	}
 	
 	/**
-	 * ¨ú±o©Ò¦³Äæ¦ì»P§ó·s­Èªºª«¥ó
-	 * @return ©Ò¦³Äæ¦ì»P§ó·s­Èªºª«¥ó
+	 * å–å¾—æ‰€æœ‰æ¬„ä½èˆ‡æ›´æ–°å€¼çš„ç‰©ä»¶
+	 * @return æ‰€æœ‰æ¬„ä½èˆ‡æ›´æ–°å€¼çš„ç‰©ä»¶
 	 */
 	public ArrayList<FieldValue> getFieldValues(){
 		return fieldValues;
 	}
 	
 	/**
-	 * ¨ú±o±ø¥ó«ØºcªÌ
-	 * @return ±ø¥ó«ØºcªÌ
+	 * å–å¾—æ¢ä»¶å»ºæ§‹è€…
+	 * @return æ¢ä»¶å»ºæ§‹è€…
 	 */
 	public ConditionBuilder getConditionBuilder(){
 		return condBuilder;
 	}
 	
 	/**
-	 * °õ¦æ§ó·s°Ê§@
-	 * @return §ó·sªº¼Æ¶q
+	 * åŸ·è¡Œæ›´æ–°å‹•ä½œ
+	 * @return æ›´æ–°çš„æ•¸é‡
 	 */
 	public int execute(){
 		int returnValue = 0;
@@ -134,9 +134,9 @@ public class Update {
 	}
 	
 	/**
-	 * ¨Ï¥Îsql»yªk°õ¦æ§ó·s°Ê§@
-	 * @param sql sql»yªk¦r¦ê
-	 * @return §ó·sªº¼Æ¶q
+	 * ä½¿ç”¨sqlèªæ³•åŸ·è¡Œæ›´æ–°å‹•ä½œ
+	 * @param sql sqlèªæ³•å­—ä¸²
+	 * @return æ›´æ–°çš„æ•¸é‡
 	 */
 	public int executeBySQL(String sql){
 		int returnValue = 0;
@@ -153,7 +153,7 @@ public class Update {
 	}
 		
 	/**
-	 * °õ¦æ§¹«á²M°£¹L¥hªº§ó·s±Ô­z
+	 * åŸ·è¡Œå®Œå¾Œæ¸…é™¤éå»çš„æ›´æ–°æ•˜è¿°
 	 */
 	private void clear(){
 		condBuilder = null;

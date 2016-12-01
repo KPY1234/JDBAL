@@ -56,7 +56,7 @@ public class TableCreator {
 	}
 	
 	/**
-	 * °õ¦æ§¹«á²M°£¹L¥hªº·s¼W±Ô­z
+	 * åŸ·è¡Œå®Œå¾Œæ¸…é™¤éå»çš„æ–°å¢æ•˜è¿°
 	 */
 	private void clear(){
 		fieldAttributes = new ArrayList<FieldAttribute>();

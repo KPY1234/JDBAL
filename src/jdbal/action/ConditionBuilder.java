@@ -8,8 +8,8 @@ import jdbal.types.DataTypes;
 import jdbal.types.OperationTypes;
 
 /**
- * ±ø¥ó«Ø¥ßªÌª«¥ó
- * ¨Ï¥Î½d¨Ò¦p¤U¡A«Ø¥ß±ø¥ó¦¡
+ * æ¢ä»¶å»ºç«‹è€…ç‰©ä»¶
+ * ä½¿ç”¨ç¯„ä¾‹å¦‚ä¸‹ï¼Œå»ºç«‹æ¢ä»¶å¼
  * <blockquote><pre>{@code
  * 	   ConditionBuilder cb = new ConditionBuilder()
  * 			.addCondition(new Condition(field1, OperationTypes.Greater, 0, DataTypes.Number))
@@ -17,7 +17,7 @@ import jdbal.types.OperationTypes;
  * 			.addCondition(new Condition(field1, OperationTypes.Less, 5, DataTypes.Number));}	
  * </pre></blockquote>
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see    jdbal.structure.Condition
  * @see    jdbal.types.DataTypes
  * @see    jdbal.types.OperationTypes
@@ -31,8 +31,8 @@ public class ConditionBuilder {
 	String conditions = "";
 	
 	/**
-	 * ¥[¤J¥ª¬A¸¹(
-	 * @return ¦Û¤v
+	 * åŠ å…¥å·¦æ‹¬è™Ÿ(
+	 * @return è‡ªå·±
 	 */
 	public ConditionBuilder addLeftQuote(){
 		conditions += " ( ";
@@ -43,8 +43,8 @@ public class ConditionBuilder {
 	}
 	
 	/**
-	 * ¥[¤J¥k¬A¸¹
-	 * @return ¦Û¤v
+	 * åŠ å…¥å³æ‹¬è™Ÿ
+	 * @return è‡ªå·±
 	 */
 	public ConditionBuilder addRightQuote(){
 		conditions += " ) ";
@@ -54,8 +54,8 @@ public class ConditionBuilder {
 	}
 	
 	/**
-	 * ¥[¤JÅŞ¿èAND
-	 * @return ¦Û¤v
+	 * åŠ å…¥é‚è¼¯AND
+	 * @return è‡ªå·±
 	 */
 	public ConditionBuilder AND(){
 		conditions += " AND ";
@@ -66,8 +66,8 @@ public class ConditionBuilder {
 	}
 	
 	/**
-	 * ¥[¤JÅŞ¿èOR
-	 * @return ¦Û¤v
+	 * åŠ å…¥é‚è¼¯OR
+	 * @return è‡ªå·±
 	 */
 	public ConditionBuilder OR(){
 		conditions += " OR ";
@@ -78,9 +78,9 @@ public class ConditionBuilder {
 	}
 	
 	/**
-	 * ¥[¤J±ø¥ó
-	 * @param con ±ø¥óª«¥ó
-	 * @return ¦Û¤v
+	 * åŠ å…¥æ¢ä»¶
+	 * @param con æ¢ä»¶ç‰©ä»¶
+	 * @return è‡ªå·±
 	 */
 	public ConditionBuilder addCondition(Condition con){
 		conditions += con.getField()+" ";
@@ -92,8 +92,8 @@ public class ConditionBuilder {
 	}
 	
 	/**
-	 * «Ø¥ß±ø¥ó¦¡
-	 * @return ±ø¥ó¦r¦ê
+	 * å»ºç«‹æ¢ä»¶å¼
+	 * @return æ¢ä»¶å­—ä¸²
 	 */
 	String build(){
 	
@@ -112,7 +112,7 @@ public class ConditionBuilder {
 
 	
 	/**
-	 * ÅçÃÒ±ø¥óªí¥Ü¦¡¬O§_¦X²z
+	 * é©—è­‰æ¢ä»¶è¡¨ç¤ºå¼æ˜¯å¦åˆç†
 	 * @throws ConditionBuildException
 	 */
 	private void validate() throws ConditionBuildException{
@@ -143,11 +143,11 @@ public class ConditionBuilder {
 						 L_count++;
 				 
 				 if(L_count==0){
-					 String message = "±ø¥ó®æ¦¡¿ù»~:±ø¥ó + ±ø¥ó\nÀ³¸Ó¬°: ±ø¥ó + ÅŞ¿è + ±ø¥ó\n¦^¶Ç±ø¥ó¦¡¬°ªÅ¦r¦ê";
+					 String message = "æ¢ä»¶æ ¼å¼éŒ¯èª¤:æ¢ä»¶ + æ¢ä»¶\næ‡‰è©²ç‚º: æ¢ä»¶ + é‚è¼¯ + æ¢ä»¶\nå›å‚³æ¢ä»¶å¼ç‚ºç©ºå­—ä¸²";
 					 throw new ConditionBuildException(message);
 				 }
 				 if(L_count>1){
-					 String message = "±ø¥ó®æ¦¡¿ù»~:±ø¥ó +ÅŞ¿è...ÅŞ¿è+ ±ø¥ó\nÀ³¸Ó¬°±ø¥ó + ÅŞ¿è + ±ø¥ó\n¦^¶Ç±ø¥ó¦¡¬°ªÅ¦r¦ê";
+					 String message = "æ¢ä»¶æ ¼å¼éŒ¯èª¤:æ¢ä»¶ +é‚è¼¯...é‚è¼¯+ æ¢ä»¶\næ‡‰è©²ç‚ºæ¢ä»¶ + é‚è¼¯ + æ¢ä»¶\nå›å‚³æ¢ä»¶å¼ç‚ºç©ºå­—ä¸²";
 					 throw new ConditionBuildException(message);
 				 }
 			 }

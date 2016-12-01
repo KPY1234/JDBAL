@@ -1,19 +1,19 @@
 package jdbal.types;
 
 /**
- * ±Æ§ÇºØÃşª«¥ó
- * @author °ª¯E¶¿
+ * æ’åºç¨®é¡ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.2
  *
  */
 public class OrderTypes {
 
 	/**
-	 * »¼¼W±Æ§Ç
+	 * éå¢æ’åº
 	 */
 	public static final String ASC = "ASC";
 	/**
-	 * »¼´î±Æ§Ç
+	 * éæ¸›æ’åº
 	 */
 	public static final String DESC = "DESC";
 	

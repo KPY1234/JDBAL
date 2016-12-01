@@ -1,8 +1,8 @@
 package jdbal.structure;
 
 /**
- * Äæ¦ì»P­Èª«¥ó
- * @author °ª¯E¶¿
+ * æ¬„ä½èˆ‡å€¼ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.02
  *
  */
@@ -13,50 +13,50 @@ public class FieldValue {
 	private int col_dataType;
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì
-	 * @param value ­È
-	 * @param dataType ¸ê®Æ«¬ºA
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½
+	 * @param value å€¼
+	 * @param dataType è³‡æ–™å‹æ…‹
 	 */
 	public FieldValue(String field, int value, int dataType){
 		this(field,""+value,dataType);
 	}
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì
-	 * @param value ­È
-	 * @param dataType ¸ê®Æ«¬ºA
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½
+	 * @param value å€¼
+	 * @param dataType è³‡æ–™å‹æ…‹
 	 */
 	public FieldValue(String field, long value, int dataType){
 		this(field,""+value,dataType);
 	}
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì
-	 * @param value ­È
-	 * @param dataType ¸ê®Æ«¬ºA
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½
+	 * @param value å€¼
+	 * @param dataType è³‡æ–™å‹æ…‹
 	 */
 	public FieldValue(String field, double value, int dataType){
 		this(field,""+value,dataType);
 	}
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì
-	 * @param value ­È
-	 * @param dataType ¸ê®Æ«¬ºA
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½
+	 * @param value å€¼
+	 * @param dataType è³‡æ–™å‹æ…‹
 	 */
 	public FieldValue(String field, float value, int dataType){
 		this(field,""+value,dataType);
 	}
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì
-	 * @param value ­È
-	 * @param dataType ¸ê®Æ«¬ºA
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½
+	 * @param value å€¼
+	 * @param dataType è³‡æ–™å‹æ…‹
 	 */
 	public FieldValue(String field, String value, int dataType){
 		col_field = field;
@@ -65,24 +65,24 @@ public class FieldValue {
 	}
 	
 	/**
-	 * ¨ú±oÄæ¦ì¦WºÙ
-	 * @return Äæ¦ì¦WºÙ
+	 * å–å¾—æ¬„ä½åç¨±
+	 * @return æ¬„ä½åç¨±
 	 */
 	public String getField(){
 		return col_field;
 	}
 	
 	/**
-	 * ¨ú±o­È
-	 * @return ­È
+	 * å–å¾—å€¼
+	 * @return å€¼
 	 */
 	public String getValue(){
 		return col_value;
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æ«¬ºA
-	 * @return ¸ê®Æ«¬ºA
+	 * å–å¾—è³‡æ–™å‹æ…‹
+	 * @return è³‡æ–™å‹æ…‹
 	 */
 	public int getDataType(){
 		return col_dataType;

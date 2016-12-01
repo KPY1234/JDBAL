@@ -10,15 +10,15 @@ import jdbal.types.DataTypes;
 import jdbal.types.OperationTypes;
 
 /**
- * §R°£¸ê®Æ®w¸ê®Æ
+ * åˆªé™¤è³‡æ–™åº«è³‡æ–™
  * <p>
- * Deletion ª«¥ó¥Î¨Ó§R°£¸ê®Æ®w¸ê®Æ¡AÁ|¨Ò»¡©ú¡G
+ * Deletion ç‰©ä»¶ç”¨ä¾†åˆªé™¤è³‡æ–™åº«è³‡æ–™ï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre>
  *     Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
  *     					username, password, dbname, "127.0.0.1", DataBaseTypes.DefaultSQLServerPort);
  *     Deletion delete = new Deletion(conn, tbname);
  * </pre></blockquote><p>
- * ¥[¤J±ø¥ó¦¡
+ * åŠ å…¥æ¢ä»¶å¼
  * <blockquote><pre>{@code
  * 	   ConditionBuilder cb = new ConditionBuilder()
  * 			.addCondition(new Condition(field1, OperationTypes.Greater, 0, DataTypes.Number))
@@ -26,12 +26,12 @@ import jdbal.types.OperationTypes;
  * 			.addCondition(new Condition(field1, OperationTypes.Less, 5, DataTypes.Number));
  * 	   delete.addConditions(cb);}	
  * </pre></blockquote>
- * °õ¦æ§R°£¸ê®Æ¾Ş§@
+ * åŸ·è¡Œåˆªé™¤è³‡æ–™æ“ä½œ
  * <blockquote><pre>
  *     delete.execute();
  * </pre></blockquote>
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see     jdbal.conn.Connection
  * @see     jdbal.action.ConditionBuilder
  * @since   JDBAL-0.0.2
@@ -43,9 +43,9 @@ public class Deletion {
 	private ConditionBuilder condBuilder;
 	
 	/**
-	 * «Øºc¤l
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbName ¸ê®Æªí¦WºÙ
+	 * å»ºæ§‹å­
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbName è³‡æ–™è¡¨åç¨±
 	 */
 	public Deletion(Connection conn, String tbName){
 		db_conn = conn;
@@ -53,9 +53,9 @@ public class Deletion {
 	}
 	
 	/**
-	 * ·s¼W±ø¥ó
-	 * @param cb ±ø¥ó«ØºcªÌ
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢æ¢ä»¶
+	 * @param cb æ¢ä»¶å»ºæ§‹è€…
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Deletion addConditions(ConditionBuilder cb){
 		condBuilder = cb;
@@ -63,24 +63,24 @@ public class Deletion {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æªí¦WºÙ
-	 * @return ¸ê®Æªí¦WºÙ
+	 * å–å¾—è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨åç¨±
 	 */
 	public String getTableName(){
 		return db_table;
 	}
 	
 	/**
-	 * ¨ú±o±ø¥ó«ØºcªÌ
-	 * @return ±ø¥ó«ØºcªÌ
+	 * å–å¾—æ¢ä»¶å»ºæ§‹è€…
+	 * @return æ¢ä»¶å»ºæ§‹è€…
 	 */
 	public ConditionBuilder getConditionBuilder(){
 		return condBuilder;
 	}
 	
 	/**
-	 * °õ¦æ§R°£¸ê®Æ°Ê§@
-	 * @return §R°£ªº¸ê®Æµ§¼Æ
+	 * åŸ·è¡Œåˆªé™¤è³‡æ–™å‹•ä½œ
+	 * @return åˆªé™¤çš„è³‡æ–™ç­†æ•¸
 	 */
 	public int execute(){
 		int returnValue = 0;
@@ -100,9 +100,9 @@ public class Deletion {
 	}
 	
 	/**
-	 * ¨Ï¥Îsql»yªk°õ¦æ·s¼W¸ê®Æ°Ê§@
-	 * @param sql sql»yªk¦r¦ê
-	 * @return §ó·sªº¼Æ¶q
+	 * ä½¿ç”¨sqlèªæ³•åŸ·è¡Œæ–°å¢è³‡æ–™å‹•ä½œ
+	 * @param sql sqlèªæ³•å­—ä¸²
+	 * @return æ›´æ–°çš„æ•¸é‡
 	 */
 	public int executeBySQL(String sql){
 		int returnValue = 0;
@@ -119,7 +119,7 @@ public class Deletion {
 	}
 	
 	/**
-	 * °õ¦æ§¹«á²M°£¹L¥hªº§R°£±Ô­z
+	 * åŸ·è¡Œå®Œå¾Œæ¸…é™¤éå»çš„åˆªé™¤æ•˜è¿°
 	 */
 	private void clear(){
 		condBuilder = null;

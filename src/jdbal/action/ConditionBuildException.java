@@ -1,7 +1,7 @@
 package jdbal.action;
 /**
- * ±ø¥ó«Ø¥ß¨Ò¥~
- * @author °ª¯E¶¿
+ * æ¢ä»¶å»ºç«‹ä¾‹å¤–
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.3
  *
  */
@@ -14,8 +14,8 @@ public class ConditionBuildException extends Exception{
 
 
 	/**
-	 * «Øºc¤l
-	 * @param message ¨Ò¥~°T®§
+	 * å»ºæ§‹å­
+	 * @param message ä¾‹å¤–è¨Šæ¯
 	 */
 	public ConditionBuildException(String message){
 		super(message);

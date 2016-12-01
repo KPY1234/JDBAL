@@ -9,9 +9,9 @@ import jdbal.conn.Connection;
 import jdbal.types.DataBaseTypes;
 
 /**
- * ¤¤Ä~¸ê®Æ¨ú±o
+ * ä¸­ç¹¼è³‡æ–™å–å¾—
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see     jdbal.conn.Connection
  * @see     jdbal.action.ConditionBuilder
  * @since   JDBAL-0.1.0
@@ -19,18 +19,18 @@ import jdbal.types.DataBaseTypes;
 public class MetaDataExtractor {
 	
 	/**
-	 * «Øºc¤l
+	 * å»ºæ§‹å­
 	 */
 	public MetaDataExtractor(){
 	}
 	
 	
 	/**
-	 * ¨ú±o¸ê®ÆªíÄæ¦ì¦WºÙ
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbname ¸ê®Æªí¦WºÙ
-	 * @return ¸ê®ÆªíÄæ¦ì¦WºÙ°}¦C
-	 * @throws SQLException ¸ê®Æ®w¨Ò¥~
+	 * å–å¾—è³‡æ–™è¡¨æ¬„ä½åç¨±
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbname è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨æ¬„ä½åç¨±é™£åˆ—
+	 * @throws SQLException è³‡æ–™åº«ä¾‹å¤–
 	 */
 	public static String[] getColumnName(Connection conn, String tbname) throws SQLException{
 		
@@ -57,11 +57,11 @@ public class MetaDataExtractor {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®ÆªíÄæ¦ìºØÃş
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbname ¸ê®Æªí¦WºÙ
-	 * @return ¸ê®ÆªíÄæ¦ìºØÃş°}¦C
-	 * @throws SQLException ¸ê®Æ®w¨Ò¥~
+	 * å–å¾—è³‡æ–™è¡¨æ¬„ä½ç¨®é¡
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbname è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨æ¬„ä½ç¨®é¡é™£åˆ—
+	 * @throws SQLException è³‡æ–™åº«ä¾‹å¤–
 	 */
 	public static String[] getColumnType(Connection conn, String tbname) throws SQLException{
 		

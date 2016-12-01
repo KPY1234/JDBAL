@@ -1,23 +1,23 @@
 package jdbal.types;
 
 /**
- * ¦X¨ÖºØÃşª«¥ó
- * @author °ª¯E¶¿
+ * åˆä½µç¨®é¡ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.2
  *
  */
 public class JoinTypes {
 
 	/**
-	 * ¤º³¡¦X¨Ö
+	 * å…§éƒ¨åˆä½µ
 	 */
 	public static final String INNER = "INNER JOIN";
 	/**
-	 * ¥~³¡¦X¨Ö¡A¥ª¦X¨Ö
+	 * å¤–éƒ¨åˆä½µï¼Œå·¦åˆä½µ
 	 */
 	public static final String LEFT = "LEFT JOIN";
 	/**
-	 * ¥~³¡¦X¨Ö¡A¤S¦X¨Ö
+	 * å¤–éƒ¨åˆä½µï¼Œåˆåˆä½µ
 	 */
 	public static final String RIGHT = "RIGHT JOIN";
 	

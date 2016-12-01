@@ -1,61 +1,61 @@
 package jdbal.types;
 
 /**
- * ¸ê®Æ®wºØÃşª«¥ó
- * @author °ª¯E¶¿
+ * è³‡æ–™åº«ç¨®é¡ç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.2
  *
  */
 public class DataBaseTypes {
 
 	/**
-	 * ¿ï¾ÜMySQL¸ê®Æ®w
+	 * é¸æ“‡MySQLè³‡æ–™åº«
 	 */
 	public static final int MySQL = 1;
 	/**
-	 * ¿ï¾ÜSQLServer¸ê®Æ®w
+	 * é¸æ“‡SQLServerè³‡æ–™åº«
 	 */
 	public static final int SQLServer = 2;
 	/**
-	 * ¿ï¾ÜOracle¸ê®Æ®w
+	 * é¸æ“‡Oracleè³‡æ–™åº«
 	 */
 	public static final int Oracle = 3;
 	/**
-	 * ¿ï¾ÜPostgreSQL¸ê®Æ®w
+	 * é¸æ“‡PostgreSQLè³‡æ–™åº«
 	 */
 	public static final int PostgreSQL = 4;
 	
 	/**
-	 * ¿ï¾ÜMySQLªºJavaÅX°Êµ{¦¡
+	 * é¸æ“‡MySQLçš„Javaé©…å‹•ç¨‹å¼
 	 */
 	public static final String MySQLDriver = "org.gjt.mm.mysql.Driver";
 	/**
-	 * ¿ï¾ÜSQLServerªºJavaÅX°Êµ{¦¡
+	 * é¸æ“‡SQLServerçš„Javaé©…å‹•ç¨‹å¼
 	 */
 	public static final String SQLServerDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	/**
-	 * ¿ï¾ÜOracleªºJavaÅX°Êµ{¦¡
+	 * é¸æ“‡Oracleçš„Javaé©…å‹•ç¨‹å¼
 	 */
 	public static final String OracleDriver = "oracle.jdbc.OracleDriver";
 	/**
-	 * ¿ï¾ÜPostgreSQLªºJavaÅX°Êµ{¦¡
+	 * é¸æ“‡PostgreSQLçš„Javaé©…å‹•ç¨‹å¼
 	 */
 	public static final String PostgreSQLDriver = "org.postgresql.Driver";
 	
 	/**
-	 * ¿ï¾ÜMySQLPort¹w³]³q°T°ğ
+	 * é¸æ“‡MySQLPorté è¨­é€šè¨ŠåŸ 
 	 */
 	public static final int DefaultMySQLPort = 3306;
 	/**
-	 * ¿ï¾ÜSQLServer¹w³]³q°T°ğ
+	 * é¸æ“‡SQLServeré è¨­é€šè¨ŠåŸ 
 	 */
 	public static final int DefaultSQLServerPort = 1433;
 	/**
-	 * ¿ï¾ÜOracle¹w³]³q°T°ğ
+	 * é¸æ“‡Oracleé è¨­é€šè¨ŠåŸ 
 	 */
 	public static final int DefaultOraclePort = 0;
 	/**
-	 * ¿ï¾ÜPostgreSQL¹w³]³q°T°ğ
+	 * é¸æ“‡PostgreSQLé è¨­é€šè¨ŠåŸ 
 	 */
 	public static final int DefaultPostgreSQLPort = 5432;
 	

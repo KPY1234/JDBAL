@@ -10,24 +10,24 @@ import jdbal.types.DataBaseTypes;
 import jdbal.types.DataTypes;
 
 /**
- * ·s¼W¸ê®Æ¦Ü¸ê®Æ®w
+ * æ–°å¢è³‡æ–™è‡³è³‡æ–™åº«
  * <p>
- * Insertion ª«¥ó¥Î¨Ó·s¼W¸ê®Æ¦Ü¸ê®Æ®w¡AÁ|¨Ò»¡©ú¡G
+ * Insertion ç‰©ä»¶ç”¨ä¾†æ–°å¢è³‡æ–™è‡³è³‡æ–™åº«ï¼Œèˆ‰ä¾‹èªªæ˜ï¼š
  * <blockquote><pre>{@code
  *     Connection conn = new Connection(DataBaseTypes.SQLServer, DataBaseTypes.SQLServerDriver, 
  *     					username, password, dbname, "127.0.0.1", DataBaseTypes.DefaultSQLServerPort);
  *     Insertion insert = new Insertion(conn, tbname);}
  * </pre></blockquote><p>
- * ¥[¤J·s¼WªºÄæ¦ì»P­È¡A¨Ï¥Î
+ * åŠ å…¥æ–°å¢çš„æ¬„ä½èˆ‡å€¼ï¼Œä½¿ç”¨
  * <blockquote><pre>{@code
  *     insert.addFieldValue(new FieldValue(field2, "CC001", DataTypes.String));
  *     insert.addFieldValue(new FieldValue(field3, 12, DataTypes.Number));}
  * </pre></blockquote>
- * °õ¦æ·s¼W¸ê®Æ¾Ş§@
+ * åŸ·è¡Œæ–°å¢è³‡æ–™æ“ä½œ
  * <blockquote><pre>
  *     int result = insert.execute();
  * </pre></blockquote>
- * ¤W­z°Ê§@¥i¥Î¤@¦æ±Ô­zªí¥Ü
+ * ä¸Šè¿°å‹•ä½œå¯ç”¨ä¸€è¡Œæ•˜è¿°è¡¨ç¤º
  * <blockquote><pre>{@code
  *     int result = new Insertion(conn, tbname)
  *     			.addFieldValue(new FieldValue(field2, "CC001", DataTypes.String))
@@ -36,7 +36,7 @@ import jdbal.types.DataTypes;
  * </pre></blockquote>
  * 
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @see     jdbal.conn.Connection
  * @see     jdbal.structure.FieldValue
  * @since   JDBAL-0.0.2
@@ -49,9 +49,9 @@ public class Insertion {
 	private ArrayList<FieldValue> fieldValues;
 	
 	/**
-	 * «Øºc¤l
-	 * @param conn ³sµ²¸ê®Æ®wªºª«¥ó
-	 * @param tbName ¸ê®Æªí¦WºÙ
+	 * å»ºæ§‹å­
+	 * @param conn é€£çµè³‡æ–™åº«çš„ç‰©ä»¶
+	 * @param tbName è³‡æ–™è¡¨åç¨±
 	 */
 	public Insertion(Connection conn, String tbName){
 		db_conn = conn;
@@ -60,9 +60,9 @@ public class Insertion {
 	}
 	
 	/**
-	 * ·s¼W¤§Äæ¦ì»P­Èªºª«¥ó
-	 * @param fv Äæ¦ì»P­Èªºª«¥ó
-	 * @return ¦Û¤vÃş§O
+	 * æ–°å¢ä¹‹æ¬„ä½èˆ‡å€¼çš„ç‰©ä»¶
+	 * @param fv æ¬„ä½èˆ‡å€¼çš„ç‰©ä»¶
+	 * @return è‡ªå·±é¡åˆ¥
 	 */
 	public Insertion addFieldValue(FieldValue fv){
 		fieldValues.add(fv);
@@ -70,24 +70,24 @@ public class Insertion {
 	}
 	
 	/**
-	 * ¨ú±o¸ê®Æªí¦WºÙ
-	 * @return ¸ê®Æªí¦WºÙ
+	 * å–å¾—è³‡æ–™è¡¨åç¨±
+	 * @return è³‡æ–™è¡¨åç¨±
 	 */
 	public String getTableName(){
 		return db_table;
 	}
 	
 	/**
-	 * ¨ú±o©Ò¦³Äæ¦ì»P­Èªºª«¥ó
-	 * @return ©Ò¦³Äæ¦ì»P­Èªºª«¥ó
+	 * å–å¾—æ‰€æœ‰æ¬„ä½èˆ‡å€¼çš„ç‰©ä»¶
+	 * @return æ‰€æœ‰æ¬„ä½èˆ‡å€¼çš„ç‰©ä»¶
 	 */
 	public ArrayList<FieldValue> getFieldValues(){
 		return fieldValues;
 	}
 	
 	/**
-	 * °õ¦æ·s¼W¸ê®Æ°Ê§@
-	 * @return ¥[¤Jªº¸ê®Æµ§¼Æ
+	 * åŸ·è¡Œæ–°å¢è³‡æ–™å‹•ä½œ
+	 * @return åŠ å…¥çš„è³‡æ–™ç­†æ•¸
 	 */
 	public int execute(){
 		int returnValue = 0;
@@ -107,9 +107,9 @@ public class Insertion {
 	}
 	
 	/**
-	 * ¨Ï¥Îsql»yªk°õ¦æ·s¼W¸ê®Æ°Ê§@
-	 * @param sql sql»yªk¦r¦ê
-	 * @return §ó·sªº¼Æ¶q
+	 * ä½¿ç”¨sqlèªæ³•åŸ·è¡Œæ–°å¢è³‡æ–™å‹•ä½œ
+	 * @param sql sqlèªæ³•å­—ä¸²
+	 * @return æ›´æ–°çš„æ•¸é‡
 	 */
 	public int executeBySQL(String sql){
 		int returnValue = 0;
@@ -126,7 +126,7 @@ public class Insertion {
 	}
 	
 	/**
-	 * °õ¦æ§¹«á²M°£¹L¥hªº·s¼W±Ô­z
+	 * åŸ·è¡Œå®Œå¾Œæ¸…é™¤éå»çš„æ–°å¢æ•˜è¿°
 	 */
 	private void clear(){
 		fieldValues = new ArrayList<FieldValue>();

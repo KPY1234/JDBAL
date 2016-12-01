@@ -1,9 +1,9 @@
 package jdbal.structure;
 
 /**
- * ¤@­Ó¬ö¿ý
+ * ä¸€å€‹ç´€éŒ„
  * 
- * @author °ª¯E¶¿
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.0.4
  *
  */

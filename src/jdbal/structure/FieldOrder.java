@@ -1,8 +1,8 @@
 package jdbal.structure;
 
 /**
- * Äæ¦ì±Æ§Çª«¥ó
- * @author °ª¯E¶¿
+ * æ¬„ä½æ’åºç‰©ä»¶
+ * @author é«˜æµ©é¦­
  * @since  JDBAL-0.02
  */
 public class FieldOrder {
@@ -11,9 +11,9 @@ public class FieldOrder {
 	private String orderType;
 	
 	/**
-	 * «Øºc¤l
-	 * @param field Äæ¦ì¦WºÙ
-	 * @param orderType ±Æ§Ç¤èªk
+	 * å»ºæ§‹å­
+	 * @param field æ¬„ä½åç¨±
+	 * @param orderType æ’åºæ–¹æ³•
 	 */
 	public FieldOrder(String field, String orderType){
 		col_field = field;
@@ -21,16 +21,16 @@ public class FieldOrder {
 	}
 	
 	/**
-	 * ¨ú±oÄæ¦ì¦WºÙ
-	 * @return Äæ¦ì¦WºÙ
+	 * å–å¾—æ¬„ä½åç¨±
+	 * @return æ¬„ä½åç¨±
 	 */
 	public String getField(){
 		return col_field;
 	}
 	
 	/**
-	 * ¨ú±o±Æ§Ç¤èªk
-	 * @return ±Æ§Ç¤èªk
+	 * å–å¾—æ’åºæ–¹æ³•
+	 * @return æ’åºæ–¹æ³•
 	 */
 	public String getOrder(){
 		return orderType;
